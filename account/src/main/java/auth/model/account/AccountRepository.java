@@ -1,4 +1,4 @@
-package account.model;
+package auth.model.account;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

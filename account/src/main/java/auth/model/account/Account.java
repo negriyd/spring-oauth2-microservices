@@ -1,4 +1,4 @@
-package account.model;
+package auth.model.account;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
