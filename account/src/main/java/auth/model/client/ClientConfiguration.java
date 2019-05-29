@@ -16,14 +16,14 @@ import java.util.Optional;
 @Configuration
 public class ClientConfiguration {
 
-    private final LoadBalancerClient loadBalancerClient;
+    /*private final LoadBalancerClient loadBalancerClient;
 
     @Autowired
     public ClientConfiguration(LoadBalancerClient client) {
         this.loadBalancerClient = client;
-    }
+    }*/
 
-    @Bean
+    //@Bean
     ClientDetailsService clientDetailsService(ClientRepository clientRepository) {
         return clientId -> clientRepository
                 .findByClientId(clientId)
@@ -35,14 +35,15 @@ public class ClientConfiguration {
 
                             //details.setAutoApproveScopes(Arrays.asList(client.getAutoApproveScopes().split(",")));
 
-                            String greetingsClientRedirectUri = Optional
+                            /*String greetingsClientRedirectUri = Optional
                                     .ofNullable(this.loadBalancerClient.choose("greetings-client"))
                                     .map(si -> "http://" + si.getHost() + ':' + si.getPort() + '/')
                                     .orElseThrow(
-                                            () -> new ClientRegistrationException("couldn't find and bind a greetings-client IP"));
+                                            () -> new ClientRegistrationException("couldn't find and bind a greetings-client IP"));*/
+                            String greetingsClientRedirectUri = "http://google.com.ua";
+                            details.setRegisteredRedirectUri(Collections.singleton(greetingsClientRedirectUri));
 
-                                    details.setRegisteredRedirectUri(Collections.singleton(greetingsClientRedirectUri));
-                                    return details;
+                            return details;
                         }
                 )
                 .orElseThrow(
