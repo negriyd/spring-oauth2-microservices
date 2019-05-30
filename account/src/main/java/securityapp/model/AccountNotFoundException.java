@@ -1,11 +1,11 @@
-package account.model;
+package securityapp.model;
 
 public class AccountNotFoundException extends RuntimeException {
 
     private final String id;
 
     public AccountNotFoundException(String id) {
-        super("account-not-found-" + id);
+        super("securityapp-not-found-" + id);
         this.id = id;
     }
 

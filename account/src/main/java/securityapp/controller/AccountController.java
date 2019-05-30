@@ -1,8 +1,8 @@
-package account.controller;
+package securityapp.controller;
 
-import account.model.Account;
-import account.model.AccountNotFoundException;
-import account.model.AccountRepository;
+import securityapp.model.Account;
+import securityapp.model.AccountNotFoundException;
+import securityapp.model.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

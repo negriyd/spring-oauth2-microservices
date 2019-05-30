@@ -1,4 +1,4 @@
-package account.model;
+package securityapp.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

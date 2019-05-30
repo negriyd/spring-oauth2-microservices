@@ -12,10 +12,17 @@
     <groupId>io.finrev</groupId>
     <artifactId>account</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>account</name>
+    <name>securityapp</name>
 
     <properties>
         <java.version>1.8</java.version>
+        <spring.version>4.2.0.RELEASE</spring.version>
+        <spring-security.version>4.0.2.RELEASE</spring-security.version>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
+        <jstl.version>1.2</jstl.version>
+        <junit.version>3.8.1</junit.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -47,6 +54,26 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!--new-->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.7.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

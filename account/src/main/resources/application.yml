@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: account-service
+    name: securityapp-service
   jpa:
     show_sql: false
     database: MYSQL
